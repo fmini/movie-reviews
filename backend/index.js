@@ -1,6 +1,7 @@
 import app from './server';
 import mongodb from 'mongodb';
 import dotenv from 'dotenv';
+import MoviesDAO from './dao/moviesDAO';
 
 // Connect to DB cluster and call functions that access the DB
 async function main() {
@@ -15,7 +16,7 @@ async function main() {
   try {
     // Connect to the MongoDB cluster
     await client.connect();
-
+    await MoviesDAO.injectDB(client);
     // Start the web server after connection
     app.listen(port, () => console.log(`server is running on port ${port}`));
   } catch (e) {
