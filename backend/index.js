@@ -1,7 +1,7 @@
-import app from './server';
+import app from './server.js';
 import mongodb from 'mongodb';
 import dotenv from 'dotenv';
-import MoviesDAO from './dao/moviesDAO';
+import MoviesDAO from './dao/moviesDAO.js';
 
 // Connect to DB cluster and call functions that access the DB
 async function main() {

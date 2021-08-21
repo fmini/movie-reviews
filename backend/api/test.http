@@ -1,0 +1,10 @@
+get http://localhost:5000/api/v1/movies
+
+###
+get http://localhost:5000/api/v1/movies?rated=G
+
+###
+get http://localhost:5000/api/v1/movies?rated=G&page=2
+
+###
+get http://localhost:5000/api/v1/movies?title=Seven
