@@ -2,7 +2,7 @@ import axios from 'axios';
 
 class MovieDataService {
   getAll(page = 0) {
-    return axios.getAll(`http://localhost:5000/api/v1/movies?page=${page}`);
+    return axios.get(`http://localhost:5000/api/v1/movies?page=${page}`);
   }
 
   get(id) {
@@ -24,7 +24,7 @@ class MovieDataService {
   }
 
   deleteReview(id, userId) {
-    return axios.deleteReview('http://localhost:5000/api/v1/movies/review', {
+    return axios.delete('http://localhost:5000/api/v1/movies/review', {
       data: { review_id: id, user_id: userId },
     });
   }
