@@ -1,10 +1,41 @@
-get http://localhost:5000/api/v1/movies
+@host = http://localhost:5000/api/v1
+
+get {{host}}/movies
 
 ###
-get http://localhost:5000/api/v1/movies?rated=G
+get {{host}}/movies?rated=G
 
 ###
-get http://localhost:5000/api/v1/movies?rated=G&page=2
+get {{host}}/movies?rated=G&page=2
 
 ###
-get http://localhost:5000/api/v1/movies?title=Seven
+get {{host}}/movies?title=Seven
+
+###
+get {{host}}/movies/ratings
+
+###
+
+get {{host}}/movies/id/573a1396f29313caabce389e
+
+
+###
+post {{host}}/movies/review
+Content-Type: application/json
+
+{
+  "movie_id": "573a1396f29313caabce3b75",
+  "review": "Could be better!!!",
+  "user_id": "4321",
+  "name": "Tom"
+}
+
+### 
+
+DELETE {{host}}/movies/review
+Content-Type: application/json
+
+{
+  "review_id": "6121a1fee1b1eddee7e5f9eb",
+  "user_id": "4321"
+}

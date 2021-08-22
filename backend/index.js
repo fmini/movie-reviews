@@ -12,7 +12,7 @@ async function main() {
   // Create an instance of the DB client and pass in the URI from .env file
   const client = new mongodb.MongoClient(process.env.MOVIEREVIEWS_DB_URI);
   // Get the port frome .env or default to port 8000
-  const port = process.env.PORT || 8080;
+  const port = process.env.PORT || 8000;
   // Connect to the DB and start server or catch error if any
   try {
     // Connect to the MongoDB cluster
