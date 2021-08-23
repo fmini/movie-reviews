@@ -64,7 +64,7 @@ const Movie = props => {
                       {moment(review.date).format('Do MMMM YYYY')}
                     </h5>
                     <p>{review.review}</p>
-                    {props.user && props.user.id === review.user.id && (
+                    {props.user && props.user.id === review.user_id && (
                       <Row>
                         <Col>
                           <Link

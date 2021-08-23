@@ -24,7 +24,7 @@ post {{host}}/movies/review
 Content-Type: application/json
 
 {
-  "movie_id": "573a1396f29313caabce3b75",
+  "movie_id": "573a13bcf29313caabd558a8",
   "review": "Could be better!!!",
   "user_id": "4321",
   "name": "Tom"
